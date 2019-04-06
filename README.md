@@ -45,7 +45,7 @@ Config gitlab to only allow approved & verified commits
 
 https://gitlab.com/[GROUP]/[PROJECT]/walkthrough/settings/repository#js-push-rules
 
-![gitlab push rules][push_rules.png]
+![gitlab push rules](push_rules.png)
 
 when you commit, add in the `-S` tag to make sure you sign the commit
 
