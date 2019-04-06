@@ -17,6 +17,7 @@ Host Objectives:
 ### Signing Commits
 [Git Signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work)
 get the ID of your gpg key `gpg --list-keys` and configure git to use that key
+[Gitlab & GPG](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
 
     # had to do this to import keybase pgp key, only for the import
     export GPG_TTY=$(tty)
@@ -25,6 +26,20 @@ get the ID of your gpg key `gpg --list-keys` and configure git to use that key
     git config --global commit.gpgsign true
     # if having issues w/ gpg
     gpgconfg --kill gpg-agent
+
+GPG config for verified in gitlab
+
+    gpg --edit-key [KEYID]
+    adduid
+    # enter information that matched gitlab
+    # list uids and select the one that doesn't match
+    uid [NON_MATCHING_ID]
+    deluid
+    # to remove the other uid
+    # also do a trust
+    trust
+    5
+    # only a 5 if you truly trust that key
 
 when you commit, add in the `-S` tag to make sure you sign the commit
 
