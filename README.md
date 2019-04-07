@@ -24,7 +24,12 @@ __Objectives__
 - associating GPG key with git
 
 #### Setup GPG key
-The first step is to generate (or if you already have one, import) a GPG key. The GPG key will be used to associate your identity to gitlab, and verify you as an author of the commits, and code being pushed to the gitlab repository. Gitlab has some instructions already on how to [generate a GPG key](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#generating-a-gpg-key) they contain a lot more depth and detail, below is an abbreviated version of what is on that page.
+The first step is to generate (or if you already have one, import) a GPG key. The GPG key will be used to associate your identity to gitlab, and verify you as an author of the commits, and code being pushed to the gitlab repository.
+
+[Using Keybase](docs/keybase.md)
+
+##### Generating a new key
+Gitlab has some instructions already on how to [generate a GPG key](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#generating-a-gpg-key) they contain a lot more depth and detail, below is an abbreviated version of what is on that page.
 
 ```bash
 # instructions and more detail in link provided
@@ -64,11 +69,11 @@ gpg --full-gen-key
  Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 
 # export the public key so it can be added to gitlab
-gpg --armor --export [KEY_ID]
+gpg --armor --export $(KEY_ID)
 ```
 
 [Git Signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work)
-get the ID of your gpg key `gpg --list-keys` and configure git to use that key
+get the ID of your gpg key `gpg --list-signatures` and configure git to use that key
 [Gitlab & GPG](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
 
     # had to do this to import keybase pgp key, only for the import
@@ -97,7 +102,7 @@ Config gitlab to only allow approved & verified commits
 
 https://gitlab.com/[GROUP]/[PROJECT]/walkthrough/settings/repository#js-push-rules
 
-![gitlab push rules](push_rules.png)
+![gitlab push rules](images/push_rules.png)
 
 when you commit, add in the `-S` tag to make sure you sign the commit
 
