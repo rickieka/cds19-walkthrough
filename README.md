@@ -7,7 +7,15 @@ Container Objectives:
 - Patch Management: container build process
 - Authenticity: signing
 - A/V: container scanning
+
+Registry Objectives:
+- Signing images
 - Secure/Trusted Delivery: Registry promotion
+
+Additional Objectives:
+- Notary
+- Artifact Security (trust model)
+- keybase GPG keys
 
 Host Objectives:
 - Kubernetes node
@@ -26,7 +34,6 @@ __Objectives__
 #### Setup GPG key
 The first step is to generate (or if you already have one, import) a GPG key. The GPG key will be used to associate your identity to gitlab, and verify you as an author of the commits, and code being pushed to the gitlab repository.
 
-[Using Keybase](docs/keybase.md)
 
 ##### Generating a new key
 Gitlab has some instructions already on how to [generate a GPG key](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#generating-a-gpg-key) they contain a lot more depth and detail, below is an abbreviated version of what is on that page.
@@ -72,31 +79,37 @@ gpg --full-gen-key
 gpg --armor --export $(KEY_ID)
 ```
 
+##### Configure git to use your key
+
 [Git Signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work)
-get the ID of your gpg key `gpg --list-signatures` and configure git to use that key
+get the ID of your gpg key `gpg --list-keys` and configure git to use that key
 [Gitlab & GPG](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
 
-    # had to do this to import keybase pgp key, only for the import
-    export GPG_TTY=$(tty)
-    # configure git
-    git config --global user.signingkey [KEYID]
-    git config --global commit.gpgsign true
-    # if having issues w/ gpg
-    gpgconfg --kill gpg-agent
+```bash
+# configure git
+git config --global user.signingkey [KEYID]
+git config --global commit.gpgsign true
+# if having issues w/ gpg
+gpgconfg --kill gpg-agent
+```
 
-GPG config for verified in gitlab
+Add 
 
-    gpg --edit-key [KEYID]
-    adduid
-    # enter information that matched gitlab
-    # list uids and select the one that doesn't match
-    uid [NON_MATCHING_ID]
-    deluid
-    # to remove the other uid
-    # also do a trust
-    trust
+GPG config for verified in gitlab (if unverified when added)
+
+```bash
+gpg --edit-key [KEYID]
+  gpg> adduid
+  # enter information that match gitlab email
+  # list uids and select the one that doesn't match
+  gpg> uid [NON_MATCHING_ID]
+  gpg> deluid
+  # to remove the other uid
+  # also do a trust
+  gpg> trust
     5
-    # only a 5 if you truly trust that key
+  # only a 5 if you truly trust that key
+```
 
 Config gitlab to only allow approved & verified commits
 
@@ -118,9 +131,20 @@ Objectives:
 ### Containers
 
 #### Base Image
+
 alpine FTW
 
 ### Nodes
 in a managed solution, access to the Node isn't always permitted, as such you rely on the vendor to keep your nodes up to date. In a non-managed solution it is important to understand how to safetly pull a node out of the cluster, upgrade it and put it back in the cluster.
 
+## Regisry Objectives
 
+### Signed Images
+
+[Docker content trust](https://docs.docker.com/engine/security/trust/content_trust/)
+
+## Aditional Objectives
+
+### Keybase GPG keys
+
+[Using Keybase](docs/keybase.md)
