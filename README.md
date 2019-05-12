@@ -23,6 +23,7 @@ Host Objectives:
 ## Code Objectives
 
 - [Signing Commits](docs/signing_commits.md)
+- [Setup demo project](docs/demo_project.md)
 
 ## Container Objectives
 
