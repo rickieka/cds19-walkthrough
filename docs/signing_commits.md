@@ -100,3 +100,10 @@ when you commit, add in the `-S` tag to make sure you sign the commit
 # add this to your .rc file
 export GPG_TTY=$(tty)
 ```
+## Configure Repository Hosting Service
+
+Next up, we need to configure our repository hosting service with the gpg key we created to get a "Verified" signature.
+
+[GitLab Instructions](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#adding-a-gpg-key-to-your-account)
+
+[GitHub Instructions](https://help.github.com/en/articles/adding-a-new-gpg-key-to-your-github-account)

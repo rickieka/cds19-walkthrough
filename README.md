@@ -22,12 +22,12 @@ Host Objectives:
 
 ## Code Objectives
 
-[Signing Commits](docs/signing_commits.md)
+- [Signing Commits](docs/signing_commits.md)
 
 ## Container Objectives
 
-[Istio Docs](https://istio.io/docs/examples/bookinfo/)
-[Code](https://github.com/istio/istio/tree/master/samples/bookinfo/src)
+- [Istio Docs](https://istio.io/docs/examples/bookinfo/)
+- [Code](https://github.com/istio/istio/tree/master/samples/bookinfo/src)
 
 We'll be modifying the details page
 
@@ -42,6 +42,6 @@ in a managed solution, access to the Node isn't always permitted, as such you re
 
 ## Aditional Objectives
 
-[Static Application Security Testing](docs/sast.md)
-[Patch Management](docs/patch_management.md)
-[Using Keybase](docs/keybase.md)
+- [Static Application Security Testing](docs/sast.md)
+- [Patch Management](docs/patch_management.md)
+- [Using Keybase](docs/keybase.md)
