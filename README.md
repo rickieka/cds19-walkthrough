@@ -6,24 +6,28 @@ Code Objectives:
 Container Objectives:
 - Authenticity: signing
 - A/V: container scanning
+- SAST: container security scanning
+- DAST: container security scanning
 
 Registry Objectives:
 - Signing images
 - Secure/Trusted Delivery: Registry promotion
 
-Additional Objectives:
-- Notary
-- Patch Management: container build process
-- Artifact Security (trust model)
-- keybase GPG keys
-
 Host Objectives:
 - Kubernetes node
+- Runtime security (falco)
+
+Additional Objectives:
+- Patch Management: container build process
+- Notary
+- Artifact Security (trust model)
+- keybase GPG keys
+- code quality
 
 ## Code Objectives
 
-- [Signing Commits](docs/signing_commits.md)
 - [Setup demo project](docs/demo_project.md)
+- [Signing Commits](docs/signing_commits.md)
 
 ## Container Objectives
 

@@ -1,17 +1,30 @@
 # Setting up our demo project
 
-Clone down [GitLab Book Info Project](https://gitlab.com/sbs-labs/secure-pipeline/bookinfo-details) this will be the application we work with throughout the lab, building a secure pipeline
+## Setup GitLab Account
 
-There are other parts of the overall service which will already be available in our kubernetes clusters.
+First off, lets create a gitlab account by [registering for Gitlab](https://gitlab.com/users/sign_in#register-pane)
 
-```bash
-# clone project
-git clone https://gitlab.com/sbs-labs/secure-pipeline/bookinfo-details  details
+![GitLab registration page](images/gitlab_registration.png)
 
+Email confirmation:
+
+![Email confirmation page](images/gitlab_email_confirmation.png)
+
+
+## Fork project
+First fork [istio bookinfo details app](https://gitlab.com/sbs-labs/secure-pipeline/bookinfo-details)
+
+![fork gitlab project](images/fork_selection.png)
+
+```
+# clone your fork
+git clone git@gitlab.com:<USERNAME>/bookinfo-details details
+```
+## Make a change
+lets change the details application to 
+
+```
 # initialize our own details project
 cd details
-git init
-git remote add origin {PERSONAL_PROJECT_URL}
-git add .
 git commit -m "Initial commit using key signing"
 ```
