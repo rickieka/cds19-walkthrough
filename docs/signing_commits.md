@@ -10,6 +10,12 @@ __Objectives__
 ## Setup GPG key
 The first step is to generate (or if you already have one, import) a GPG key. The GPG key will be used to associate your identity to gitlab, and verify you as an author of the commits, and code being pushed to the gitlab repository.
 
+Need this to prevent `Inappropriate ioctl for device` error
+```bash
+# had to do this to import keybase pgp key, only for the import
+# add this to your .rc file
+export GPG_TTY=$(tty)
+```
 
 ### Generating a new key
 Gitlab has some instructions already on how to [generate a GPG key](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#generating-a-gpg-key) they contain a lot more depth and detail, below is an abbreviated version of what is on that page.
@@ -62,14 +68,21 @@ get the ID of your gpg key `gpg --list-keys` and configure git to use that key
 [Gitlab & GPG](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/)
 
 ```bash
-# configure git
+# You can configure git to "Auto sign" commits for you, with the key we've created
+# configure git GLOBALLY
 git config --global user.signingkey [KEYID]
 git config --global commit.gpgsign true
+
+# configure git for only this specific project (Leave off --global)
+git config user.signingkey [KEYID]
+git config commit.gpgsign true
+
+# if you don't want to do auto signing, then just make sure to commit with the -S flag
+git commit -S -m "signing this commit specifically"
+
 # if having issues w/ gpg
 gpgconfg --kill gpg-agent
 ```
-
-Add 
 
 GPG config for verified in gitlab (if unverified when added)
 
@@ -77,17 +90,22 @@ GPG config for verified in gitlab (if unverified when added)
 gpg --edit-key [KEYID]
   gpg> adduid
   # enter information that match gitlab email
+  Real name: [YOUR_NAME]
+  Email address: [YOUR_EMAIL]
+  Comment:
+  You selected this USER-ID:
+      "[YOUR_NAME] <[YOUR_EMAIL>"
+  
+  Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
   # list uids and select the one that doesn't match
   gpg> uid [NON_MATCHING_ID]
   gpg> deluid
   # to remove the other uid
-  # also do a trust
-  gpg> trust
-    5
-  # only a 5 if you truly trust that key
 ```
 
-Config gitlab to only allow approved & verified commits
+## Configure gitlab
+
+### Only allow signed commits
 
 https://gitlab.com/[GROUP]/[PROJECT]/walkthrough/settings/repository#js-push-rules
 
@@ -95,14 +113,7 @@ https://gitlab.com/[GROUP]/[PROJECT]/walkthrough/settings/repository#js-push-rul
 
 when you commit, add in the `-S` tag to make sure you sign the commit
 
-```bash
-# had to do this to import keybase pgp key, only for the import
-# add this to your .rc file
-export GPG_TTY=$(tty)
-```
-## Configure Repository Hosting Service
-
-Next up, we need to configure our repository hosting service with the gpg key we created to get a "Verified" signature.
+### add GPG key to repository hosting
 
 [GitLab Instructions](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/#adding-a-gpg-key-to-your-account)
 

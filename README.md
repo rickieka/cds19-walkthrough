@@ -6,39 +6,42 @@
 - A computer
 
 ![computer](images/bad_computer.jpg)
-
 - A keyboard
 
 ![keyboard](images/bad_keyboard.jpg)
 
-- Git
+- [Git](https://git-scm.com/)
 
 ### Things to start downloading:
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 ### Things we need to do
 - Get everyone access to [Handouts](https://gethandouts.com)
-- [Create Kubernetes Environment](docs/create_k8s.md)
-- [Configure Admission Controls](docs/admission_controls.md)
-- [Deploy Bookinfo Project](docs/deploy_bookinfo.md)
 
 ## Code Objectives
 
-- [Setup demo project](docs/demo_project.md)
-- [Signing Commits](docs/signing_commits.md)
+- (DONE) [Setup demo repo](docs/demo_project.md)
+- (DONE) [Signing Commits](docs/signing_commits.md)
+- (DONE) [Verified Commit](docs/verified_commit.md)
 
 ## Container Objectives
-- Authenticity: signing
-- A/V: container scanning
-- SAST: container security scanning
+- (INPROGRESS) [SAST](docs/sast.md): container security scanning
 - DAST: container security scanning
 
 ## Registry Objectives
 
-- [Signed Images](docs/signed_images.md)
+- (DONE) [Docker Builds](docs/docker_build.md)
 - [Private Registry](docs/private_registry.md)
+- A/V: container scanning
+- [Signed Images](docs/signed_images.md)
 - [Image promotions](docs/image_promotions.md)
+
+# Delivery Objectives
+
+- (DONE) [Create Kubernetes Environment](docs/create_k8s.md)
 - [Configure Kubernetes to pull from private registry](docs/private_reg_k8s_config.md)
+- [Configure Admission Controls](docs/admission_controls.md)
+- [Deploy Bookinfo Project](docs/deploy_bookinfo.md)
 
 ## Host Objectives:
 
@@ -46,7 +49,7 @@
 - Taints/Tolerances
 - Runtime Security (falco)
 
-Additional Objectives:
+## Additional Objectives:
 
 - Patch Management: container build process
 - Notary

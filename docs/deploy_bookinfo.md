@@ -6,4 +6,4 @@ kubectl appy -f https://raw.githubusercontent.com/istio/istio/release-1.1/sample
 
 pulling that bad-boy straight from the wilds of the internet (and you thought this lab was about security :-P)
 
-[Back](../README.md)
+[Back](README.md)
