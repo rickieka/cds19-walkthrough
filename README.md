@@ -1,29 +1,5 @@
 # Blogging Series: Secure Pipelines
 
-Code Objectives:
-- signing commits
-
-Container Objectives:
-- Authenticity: signing
-- A/V: container scanning
-- SAST: container security scanning
-- DAST: container security scanning
-
-Registry Objectives:
-- Signing images
-- Secure/Trusted Delivery: Registry promotion
-
-Host Objectives:
-- Kubernetes node
-- Runtime security (falco)
-
-Additional Objectives:
-- Patch Management: container build process
-- Notary
-- Artifact Security (trust model)
-- keybase GPG keys
-- code quality
-
 ## Prerequisites
 
 ### Things you should already have (hopefully):
@@ -43,6 +19,8 @@ Additional Objectives:
 ### Things we need to do
 - Get everyone access to [Handouts](https://gethandouts.com)
 - [Create Kubernetes Environment](docs/create_k8s.md)
+- [Configure Admission Controls](docs/admission_controls.md)
+- [Deploy Bookinfo Project](docs/deploy_bookinfo.md)
 
 ## Code Objectives
 
@@ -50,9 +28,31 @@ Additional Objectives:
 - [Signing Commits](docs/signing_commits.md)
 
 ## Container Objectives
+- Authenticity: signing
+- A/V: container scanning
+- SAST: container security scanning
+- DAST: container security scanning
 
-- [Istio Docs](https://istio.io/docs/examples/bookinfo/)
-- [Code](https://github.com/istio/istio/tree/master/samples/bookinfo/src)
+## Registry Objectives
+
+- [Signed Images](docs/signed_images.md)
+- [Private Registry](docs/private_registry.md)
+- [Image promotions](docs/image_promotions.md)
+- [Configure Kubernetes to pull from private registry](docs/private_reg_k8s_config.md)
+
+## Host Objectives:
+
+- Kubernetes node restrictions
+- Taints/Tolerances
+- Runtime Security (falco)
+
+Additional Objectives:
+
+- Patch Management: container build process
+- Notary
+- Artifact Security (trust model)
+- keybase GPG keys
+- code quality
 
 We'll be modifying the details page
 
