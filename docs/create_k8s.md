@@ -12,6 +12,7 @@ Afterwards you should get a page with a kubernetes configuration file, copy the 
 
 ### Configure multiple config files
 **-- IF you already have a `~/.kube/config` file and don't want to mess with it there are ways around that :-)**
+
 `kubectl` allows context switching, so it is possible to combine multiple configurations together, and switch between them.
 
 #### Option 1: Temporarily change `$KUBECONFIG` in your shell
@@ -19,7 +20,7 @@ Afterwards you should get a page with a kubernetes configuration file, copy the 
 
 ```bash
 export KUBECONFIG="/path/to/lab/config/file"
-# /path/to/lab/config/file can be anywhere, even in your home directory, or downloads, just make sure you use absolute pathing
+# /path/to/lab/config/file can be anywhere, even in your home directory, or downloads, just make sure if you don't use absolute pathing to stay in the same directory as the config file
 ```
 
 #### Option 2: Smash everything together in 1 file
@@ -67,6 +68,7 @@ users:
 ```
 
 #### Option 3: My favorite, drop all configs in a folder
+
 This is probably the most complex option, but once it's done you never have to touch it again, and you can add contexts (clusters) by just dropping their config files into a single directory
 
 The way I go about doing this is by creating a new directory `mkdir ~/.kube/configs/` then adding the following snippet to my shell `.rc` file, I use ZSH, so in `~/.zshrc`, or for bash `~/.bashrc` ... etc ...
@@ -85,6 +87,7 @@ fi
 ```
 
 #### Option 4: Find one you like
+
 Kubernetes has a page completely about [this topic](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) they also explain how to do the same with windows, which I'm not so familiar with
 
 ## Checking cluster access and permissions
@@ -97,3 +100,5 @@ No resources found.
 ```
 
 If you type the above, and see the same result then GREAT!!! we're good to go
+
+[Back](/)

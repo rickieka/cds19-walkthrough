@@ -28,16 +28,20 @@ Additional Objectives:
 
 ### Things you should already have (hopefully):
 - A computer
-![computer](images/bad_computer.png)
+
+![computer](images/bad_computer.jpg)
+
 - A keyboard
-![keyboard](images/bad_keyboard.png)
+
+![keyboard](images/bad_keyboard.jpg)
+
 - Git
 
 ### Things to start downloading:
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 ### Things we need to do
-- Get everyone access to [Handouts](gethandouts.com)
+- Get everyone access to [Handouts](https://gethandouts.com)
 - [Create Kubernetes Environment](docs/create_k8s.md)
 
 ## Code Objectives
