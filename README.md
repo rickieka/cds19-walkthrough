@@ -24,6 +24,22 @@ Additional Objectives:
 - keybase GPG keys
 - code quality
 
+## Prerequisites
+
+### Things you should already have (hopefully):
+- A computer
+![computer](images/bad_computer.png)
+- A keyboard
+![keyboard](images/bad_keyboard.png)
+- Git
+
+### Things to start downloading:
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+### Things we need to do
+- Get everyone access to [Handouts](gethandouts.com)
+- [Create Kubernetes Environment](docs/create_k8s.md)
+
 ## Code Objectives
 
 - [Setup demo project](docs/demo_project.md)

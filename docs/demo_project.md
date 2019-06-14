@@ -6,9 +6,17 @@ First off, lets create a gitlab account by [registering for Gitlab](https://gitl
 
 ![GitLab registration page](images/gitlab_registration.png)
 
-Email confirmation:
+We need to confirm our account now:
 
 ![Email confirmation page](images/gitlab_email_confirmation.png)
+
+go to inbox and "Confirm your account"
+
+![Email confirm](images/gitlab_email_confirm.png)
+
+Login for the first time
+
+![First Login](images/gitlab_first_login.png)
 
 
 ## Fork project
