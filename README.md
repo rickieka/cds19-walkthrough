@@ -25,13 +25,15 @@
 - (DONE) [Verified Commit](docs/verified_commit.md)
 
 ## Container Objectives
-- (INPROGRESS) [SAST](docs/sast.md): container security scanning
+- (DONE) [Tests](docs/tests.md)
+- (DONE) [SAST](docs/sast.md): container security scanning
+- Code Quality
+- Secrets Detection
 - DAST: container security scanning
 
 ## Registry Objectives
-
 - (DONE) [Docker Builds](docs/docker_build.md)
-- [Private Registry](docs/private_registry.md)
+- (INPROGRESS) [Private Registry](docs/private_registry.md)
 - A/V: container scanning
 - [Signed Images](docs/signed_images.md)
 - [Image promotions](docs/image_promotions.md)
