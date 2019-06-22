@@ -1,4 +1,6 @@
 expose:
+  tls:
+    secretName: harbor-tls
   ingress:
     hosts:
       core: "harbor.secpipe.stmpy.me"
