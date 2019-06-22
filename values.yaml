@@ -1,0 +1,6 @@
+expose:
+  ingress:
+    hosts:
+      core: "harbor.secpipe.stmpy.me"
+      notary: "notary.secpipe.stmpy.me"
+externalURL: "https://harbor.secpipe.stmpy.me"

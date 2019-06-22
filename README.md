@@ -27,9 +27,11 @@
 ## Container Objectives
 - (DONE) [Tests](docs/tests.md)
 - (DONE) [SAST](docs/sast.md): container security scanning
+- [Claire](docs/clair.md): Vulnerability Statis Analysis for Containers
 - Code Quality
 - Secrets Detection
 - DAST: container security scanning
+
 
 ## Registry Objectives
 - (DONE) [Docker Builds](docs/docker_build.md)
