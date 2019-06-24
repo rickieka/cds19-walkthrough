@@ -22,7 +22,7 @@ the resulting `~/.docker/config.json` file should contain something like this
 ```json
 {
     "auths": {
-        "harbor.secpipe.stmpy.me": {
+        "harbor2.secpipe.stmpy.me": {
             "auth": "[SORT_OF_ENCODED_PASSWORD]"
         }
     }
@@ -33,7 +33,7 @@ we will now use this to create the secret in kubernetes
 
 ```sh
 kubectl create secret generic harbor-creds \
-    --from-file .dockerconfigjson=$HOME/.docker/config.json> \
+    --from-file .dockerconfigjson=$HOME/.docker/config.json \
     --type kubernetes.io/dockerconfigjson
 ```
 

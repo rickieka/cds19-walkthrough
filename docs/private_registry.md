@@ -67,9 +67,9 @@ expose:
 #       certmanager.k8s.io/issuer: "letsencrypt-staging"
 #       certmanager.k8s.io/acme-challenge-type: http01
     hosts:
-      core: "harbor.secpipe.stmpy.me"
-      notary: "notary.secpipe.stmpy.me"
-externalURL: "https://harbor.secpipe.stmpy.me"
+      core: "harbor2.secpipe.stmpy.me"
+      notary: "notary2.secpipe.stmpy.me"
+externalURL: "https://harbor2.secpipe.stmpy.me"
 persistence:
   persistentVolumeClaim:
     registry:

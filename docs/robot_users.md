@@ -16,7 +16,7 @@ go to this URL https://gitlab.com/[USERNAME_OR_GROUP]/[PROJECT_NAME]/-/settings/
 HARBOR_USER=robot$$gitlab-integration
 HARBOR_PASSWORD=[AS_PROVIDED]
 HARBOR_PROJECT_NAME=travis
-HARBOR_REGISTRY=harbor.secpipe.stmpy.me
+HARBOR_REGISTRY=harbor2.secpipe.stmpy.me
 ```
 
 ![Setting variables in GitLab](images/set_variables_in_gitlab.png)

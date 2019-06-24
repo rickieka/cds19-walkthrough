@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: boolio-app
-        image: harbor.secpipe.stmpy.me/[HARBOR_PROJECT]/boolio-app
+        image: harbor2.secpipe.stmpy.me/[HARBOR_PROJECT]/boolio-app
         ports:
         - containerPort: 3000
       imagePullSecrets:
