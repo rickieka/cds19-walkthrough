@@ -7,7 +7,7 @@ I prefer the first method - using an existing docker config file, but first you 
 ```sh
 # save current config to put back later
 $ mv ~/.docker/config.json ~/.docker/config.json.bak
-docker login harbor.secpipe.stmpy.me
+docker login [harbor].secpipe.stmpy.me
 Username: [ROBOT_USERNAME]
 Password: [ROBOT_PASSWORD]
 WARNING! Your password will be stored unencrypted in /home/stmpy/.docker/config.json.
@@ -22,7 +22,7 @@ the resulting `~/.docker/config.json` file should contain something like this
 ```json
 {
     "auths": {
-        "harbor2.secpipe.stmpy.me": {
+        "[harbor].secpipe.stmpy.me": {
             "auth": "[SORT_OF_ENCODED_PASSWORD]"
         }
     }

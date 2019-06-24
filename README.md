@@ -37,7 +37,7 @@
 - (DONE) [Docker Builds](docs/docker_build.md)
 - (DONE) [Robot Users](docs/robot_users.md)
 - (DONE) [Pushing to Private Registry](docs/delivery.md)
-- Signed Images
+- Notary: Signed Images
 - A/V: container scanning - via trust
 - Image promotions
 
@@ -57,7 +57,6 @@
 ## Additional Objectives:
 
 - Patch Management: container build process
-- Notary
 - Artifact Security (trust model)
 - keybase GPG keys
 - code quality
