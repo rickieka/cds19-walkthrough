@@ -1,5 +1,11 @@
 # Private Registry (Harbor)
 
+## Helm
+
+using the helm method to install, if you need helm go [here](https://helm.sh/docs/)
+
+make sure to be on helm `2.14.1` because of [this](https://github.com/helm/helm/issues/5750)
+
 ## Cert Installation
 
 The cert can be handled multiple ways, regardless of how it is done you should end up with a secret containing the certificate
@@ -43,14 +49,6 @@ kubectl create secret tls harbor-tls --key harbor_server_private.key --cert harb
 
 Always an option - great for testing things out
 
-### Generate certificate for harbor domain
-
-## Helm
-
-using the helm method to install, if you need helm go [here](https://helm.sh/docs/)
-
-make sure to be on helm `2.14.1` because of [this](https://github.com/helm/helm/issues/5750)
-
 ## Harbor Installation
 
 [Installing via Helm](https://github.com/goharbor/harbor-helm)
@@ -78,6 +76,7 @@ persistence:
       size: 50Gi
 ```
 Install using Helm
+
 ```sh
 helm install -f values.yaml --name secpipe-lab harbor/harbor
 ```
@@ -85,4 +84,4 @@ helm install -f values.yaml --name secpipe-lab harbor/harbor
 ## Notes:
 - Harbor Homepage: https://goharbor.io
 - Docs: https://github.com/goharbor/harbor/tree/master/docs
-
+- Insecure Registry: https://docs.docker.com/registry/insecure/
