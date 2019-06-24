@@ -1,6 +1,17 @@
 expose:
+  tls:
+    secretName: harbor-tls
   ingress:
+    annotations:
+       kubernetes.io/ingress.class: "nginx"
+#       Cert-Manager
+       certmanager.k8s.io/issuer: "letsencrypt-staging"
+       certmanager.k8s.io/acme-challenge-type: http01
     hosts:
       core: "harbor.secpipe.stmpy.me"
       notary: "notary.secpipe.stmpy.me"
 externalURL: "https://harbor.secpipe.stmpy.me"
+persistence:
+  persistentVolumeClaim:
+    registry:
+      size: 50Gi
