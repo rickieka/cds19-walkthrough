@@ -45,7 +45,7 @@
 
 - (DONE) [Create Kubernetes Environment](docs/create_k8s.md)
 - (DONE) [Configure Kubernetes to pull from private registry](docs/private_reg_k8s_config.md)
-- (INPROGRESS) [Deploy Application](docs/deploy_application.md)
+- (DONE) [Deploy Application](docs/deploy_application.md)
 - [Configure Admission Controls](docs/admission_controls.md)
 
 ## Host Objectives:
