@@ -33,10 +33,11 @@
 - DAST: container security scanning
 
 ## Registry Objectives
-- (DONE) [Docker Builds](docs/docker_build.md)
 - (DONE) [Private Registry](docs/private_registry.md)
-- (DONE) A/V: container scanning - via trust
+- (DONE) [Docker Builds](docs/docker_build.md)
 - (INPROGRESS) [Robot Users](docs/robot_users.md)
+- [Pushing to Private Registry](docs/delivery.md)
+- (DONE) A/V: container scanning - via trust
 - Signed Images
 - Image promotions
 
