@@ -35,18 +35,18 @@
 ## Registry Objectives
 - (DONE) [Private Registry](docs/private_registry.md)
 - (DONE) [Docker Builds](docs/docker_build.md)
-- (INPROGRESS) [Robot Users](docs/robot_users.md)
-- [Pushing to Private Registry](docs/delivery.md)
-- (DONE) A/V: container scanning - via trust
+- (DONE) [Robot Users](docs/robot_users.md)
+- (DONE) [Pushing to Private Registry](docs/delivery.md)
 - Signed Images
+- A/V: container scanning - via trust
 - Image promotions
 
 # Delivery Objectives
 
 - (DONE) [Create Kubernetes Environment](docs/create_k8s.md)
-- [Configure Kubernetes to pull from private registry](docs/private_reg_k8s_config.md)
+- (DONE) [Configure Kubernetes to pull from private registry](docs/private_reg_k8s_config.md)
+- (INPROGRESS) [Deploy Application](docs/deploy_application.md)
 - [Configure Admission Controls](docs/admission_controls.md)
-- [Deploy Bookinfo Project](docs/deploy_bookinfo.md)
 
 ## Host Objectives:
 

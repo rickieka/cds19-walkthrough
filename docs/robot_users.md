@@ -12,10 +12,11 @@ Harbor provides the ability to generate users that are not tied to a human's acc
 go to this URL https://gitlab.com/[USERNAME_OR_GROUP]/[PROJECT_NAME]/-/settings/ci_cd
 
 ```sh
-HARBOR_USER=robot$gitlab-integration
+# Make sure to add $$ to escape the username - or gitlab will try to do variable substitution to it
+HARBOR_USER=robot$$gitlab-integration
 HARBOR_PASSWORD=[AS_PROVIDED]
 HARBOR_PROJECT_NAME=travis
-HARBOR_REGISTRY_URL=https://harbor.secpipe.stmpy.me
+HARBOR_REGISTRY=harbor.secpipe.stmpy.me
 ```
 
 ![Setting variables in GitLab](images/set_variables_in_gitlab.png)
@@ -31,3 +32,7 @@ you can call the variables just as they are declared in the CI/CD settings withi
         - echo $HARBOR_REGISTRY_URL
 # ...
 ```
+
+## Notes:
+- https://stackoverflow.com/questions/50133073/gitlab-ci-docker-in-docker-access-to-insecure-registry#50133074
+- https://docs.gitlab.com/ee/ci/variables/#gitlab-ciyml-defined-variables

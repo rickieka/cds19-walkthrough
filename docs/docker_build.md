@@ -28,4 +28,5 @@ stages:
 # ...
 ```
 
-We want to use these to push our docker images to Harbor, first we need to setup
+## Notes:
+- https://stackoverflow.com/questions/50133073/gitlab-ci-docker-in-docker-access-to-insecure-registry#50133074
